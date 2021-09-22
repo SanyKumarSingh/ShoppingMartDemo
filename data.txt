@@ -1,0 +1,81 @@
+######### ADD 1 Product - http://localhost:8080/api/v1/products/
+[
+{
+    "productName":"Rice_5Kg",
+    "price": "8",
+    "persentDiscount": "2"
+}
+]
+
+#######ADD Multiple Products
+[
+	{
+    "productName":"Wheat_5Kg",
+    "price": "15",
+    "persentDiscount": "0"
+	},
+	{
+    "productName":"Sugar_2Kg",
+    "price": "5",
+    "persentDiscount": "0"
+	},
+	{
+    "productName":"Salt_1Kg",
+    "price": "2",
+    "persentDiscount": "0"
+	}
+]
+
+########Generate Total Amount - http://localhost:8080/api/v1/generateBill/
+{
+    "customerMobileNumber": "8336970846",
+    "productQtyMap" : {
+						"101": "2",
+						"102": "1",
+						"103": "1"
+					}
+}
+
+########Generate Bill
+{
+    "customerMobileNumber": "8336970846",
+    "generateBill": true,
+    "productQtyMap" : {
+						"101": "2",
+						"102": "1",
+						"103": "1"
+					}
+}
+
+
+
+#########Create Customer - http://localhost:8080/api/v1/customers
+{
+    "emailId":"IronMan@gmail.com",
+    "firstName":"Robert",
+    "lastName":"Downey, Jr.",
+    "mobileNumber": "8336970846"
+}
+
+#########DELETE Customer - http://localhost:8080/api/v1/customers/1
+
+######### UPDATE customer - http://localhost:8080/api/v1/customers/1
+{
+    "emailId":"IronManForever@gmail.com",
+    "firstName":"Robert",
+    "lastName":"Downey, Jr.",
+    "mobileNumber": "9021712517"
+}
+
+
+
+Body -
+HttpStatus.OK
+HttpStatus.BAD_REQUEST
+HttpStatus.UNPROCESSABLE_ENTITY
+HttpStatus.CREATED
+HttpStatus.ACCEPTED
+
+Header -
+HttpStatus.NO_CONTENT
+HttpStatus.NOT_FOUND
